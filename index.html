@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cricketers Info</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<header>
+    <h1>🏏 C for Cricket</h1>
+    <p>Details about Matches, Runs, and Best Scores</p>
+    <input type="text" id="searchInput" placeholder="Search cricketer..." onkeyup="searchCricketer()">
+</header>
+
+<!-- Batsmen Section -->
+<section>
+    <h2 class="section-title">🏏 Batsmen</h2>
+    <div class="cricketers" id="batsmen">
+
+        <div class="card" onclick="showDetails('Virat Kohli', 500, 25000, 183)">
+            <img src="Virat.webp" alt="Virat Kohli">
+            <h3>Virat Kohli</h3>
+            <p>Matches Played: 500</p>
+            <p>Runs Scored: 25000</p>
+            <p>Best Score: 183</p>
+        </div>
+
+        <div class="card" onclick="showDetails('Rohit Sharma', 430, 18000, 264)">
+            <img src="Rohit.webp" alt="Rohit Sharma">
+            <h3>Rohit Sharma</h3>
+            <p>Matches Played: 430</p>
+            <p>Runs Scored: 18000</p>
+            <p>Best Score: 264</p>
+        </div>
+
+        <div class="card" onclick="showDetails('Sachin Tendulkar', 664, 34357, '248*')">
+            <img src="sachin.webp" alt="Sachin Tendulkar">
+            <h3>Sachin Tendulkar</h3>
+            <p>Matches Played: 664</p>
+            <p>Runs Scored: 34357</p>
+            <p>Best Score: 248*</p>
+        </div>
+
+        <div class="card" onclick="showDetails('KL Rahul', 200, 8000, 131)">
+            <img src="rahul.webp" alt="KL Rahul">
+            <h3>KL Rahul</h3>
+            <p>Matches Played: 200</p>
+            <p>Runs Scored: 8000</p>
+            <p>Best Score: 131</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Bowlers Section -->
+<section>
+    <h2 class="section-title">🎯 Bowlers</h2>
+    <div class="cricketers" id="bowlers">
+
+        <div class="card" onclick="showDetails('Jasprit Bumrah', 150, 800, '64*', 320, 4.5)">
+            <img src="bumrah.webp" alt="Jasprit Bumrah">
+            <h3>Jasprit Bumrah</h3>
+            <p>Matches: 150 | Wickets: 320</p>
+            <p>Runs: 800 | Best: 64*</p>
+            <p>Economy: 4.5</p>
+        </div>
+
+        <div class="card" onclick="showDetails('Mohammed Shami', 140, 500, '56*', 280, 5.1)">
+            <img src="shami.webp" alt="Mohammed Shami">
+            <h3>Mohammed Shami</h3>
+            <p>Matches: 140 | Wickets: 280</p>
+            <p>Runs: 500 | Best: 56*</p>
+            <p>Economy: 5.1</p>
+        </div>
+
+        <div class="card" onclick="showDetails('Yuzvendra Chahal', 120, 300, '29', 210, 5.7)">
+            <img src="chahal.webp" alt="Yuzvendra Chahal">
+            <h3>Yuzvendra Chahal</h3>
+            <p>Matches: 120 | Wickets: 210</p>
+            <p>Runs: 300 | Best: 29</p>
+            <p>Economy: 5.7</p>
+        </div>
+
+        <div class="card" onclick="showDetails('Ravichandran Ashwin', 250, 1500, '124', 480, 3.9)">
+            <img src="ashwin.webp" alt="Ravichandran Ashwin">
+            <h3>Ravichandran Ashwin</h3>
+            <p>Matches: 250 | Wickets: 480</p>
+            <p>Runs: 1500 | Best: 124</p>
+            <p>Economy: 3.9</p>
+        </div>
+
+        <div class="card" onclick="showDetails('Bhuvneshwar Kumar', 200, 1200, '53*', 260, 4.8)">
+            <img src="bhuvneshwar.webp" alt="Bhuvneshwar Kumar">
+            <h3>Bhuvneshwar Kumar</h3>
+            <p>Matches: 200 | Wickets: 260</p>
+            <p>Runs: 1200 | Best: 53*</p>
+            <p>Economy: 4.8</p>
+        </div>
+
+    </div>
+</section>
+<!-- All-Rounders Section -->
+<section>
+    <h2 class="section-title">💥 All-Rounders</h2>
+    <div class="cricketers" id="allrounders">
+
+        <div class="card" onclick="showDetails('MS Dhoni', 450, 17000, '183*', 0, '-')">
+            <img src="dhoni.webp" alt="MS Dhoni">
+            <h3>MS Dhoni</h3>
+            <p>Matches: 450 | Wickets: 0</p>
+            <p>Runs: 17000 | Best: 183*</p>
+            <p>Economy: -</p>
+        </div>
+
+        <div class="card" onclick="showDetails('Hardik Pandya', 160, 4000, '92', 70, 6.2)">
+            <img src="hardik.webp" alt="Hardik Pandya">
+            <h3>Hardik Pandya</h3>
+            <p>Matches: 160 | Wickets: 70</p>
+            <p>Runs: 4000 | Best: 92</p>
+            <p>Economy: 6.2</p>
+        </div>
+
+        <div class="card" onclick="showDetails('Ravindra Jadeja', 300, 5500, '175', 240, 4.3)">
+            <img src="jadeja.webp" alt="Ravindra Jadeja">
+            <h3>Ravindra Jadeja</h3>
+            <p>Matches: 300 | Wickets: 240</p>
+            <p>Runs: 5500 | Best: 175</p>
+            <p>Economy: 4.3</p>
+        </div>
+
+        <div class="card" onclick="showDetails('Ben Stokes', 250, 7000, '258', 110, 5.0)">
+            <img src="stokes.webp" alt="Ben Stokes">
+            <h3>Ben Stokes</h3>
+            <p>Matches: 250 | Wickets: 110</p>
+            <p>Runs: 7000 | Best: 258</p>
+            <p>Economy: 5.0</p>
+        </div>
+
+        <div class="card" onclick="showDetails('Shakib Al Hasan', 380, 12000, '217', 400, 4.5)">
+            <img src="shakib.webp" alt="Shakib Al Hasan">
+            <h3>Shakib Al Hasan</h3>
+            <p>Matches: 380 | Wickets: 400</p>
+            <p>Runs: 12000 | Best: 217</p>
+            <p>Economy: 4.5</p>
+        </div>
+
+    </div>
+</section>
+<!-- Popup Structure -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h2 id="popup-name"></h2>
+        <p id="popup-matches"></p>
+        <p id="popup-runs"></p>
+        <p id="popup-best"></p>
+        <p id="popup-wickets"></p>
+        <p id="popup-economy"></p>
+    </div>
+</div>
+<!-- Floating Shapes for Effect -->
+<div class="floating-shapes">
+    <div class="floating-shape"></div>
+    <div class="floating-shape"></div>
+    <div class="floating-shape"></div>
+</div>
+<!-- Animated Character (e.g., Mickey Mouse) -->
+<!-- Animated Character (e.g., Mickey Mouse) -->
+<div class="character">
+    <img src="Mickey-Mouse.webp" alt="Mickey Mouse">
+</div>
+
+
+
+
+
+<footer>
+    
+    <p>&copy; 2025 Cricket Info Website</p>
+</footer>
+
+<script src="index.js"></script>
+</body>
+</html>
