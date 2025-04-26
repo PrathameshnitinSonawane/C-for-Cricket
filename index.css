@@ -268,21 +268,4 @@ button:hover {
     animation: wave 2s ease-in-out infinite;
 }
 
-@keyframes moveCharacter {
-    0% { left: -100px; }
-    25% { left: 30%; }
-    50% { left: 60%; }
-    75% { left: 90%; }
-    100% { left: 100%; }
-}
 
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-15px); }
-    60% { transform: translateY(-10px); }
-}
-
-@keyframes wave {
-    0%, 100% { transform: rotate(0); }
-    50% { transform: rotate(10deg); }
-}
