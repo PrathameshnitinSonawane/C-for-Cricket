@@ -1,101 +1,148 @@
+/* Floating Background */
+.floating-shapes {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0; 
+    animation: moveShapes 30s ease infinite;
+}
 
-    body {
-        font-family: 'Poppins', sans-serif;
-        background: #f0f2f5;
-        margin: 0;
-        padding: 0;
-    }
+.floating-shape {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    animation: floatShape 5s ease-in-out infinite;
+}
 
-    header {
-        background-color: #1e3a8a; /* Deep Blue */
-        color: white;
-        text-align: center;
-        padding: 20px 0;
-        font-size: 2em;
-        letter-spacing: 1px;
-        text-shadow: 1px 1px 4px #000;
-    }
+.floating-shape:nth-child(1) {
+    top: 10%;
+    left: 20%;
+    animation-duration: 7s;
+    animation-delay: 2s;
+}
 
-    .section-title {
-        text-align: center;
-        padding: 30px;
-        font-size: 28px;
-        margin-top: 30px;
-        color: #333;
-        background: linear-gradient(to right, #f5f7fa, #c3cfe2);
-        border-radius: 12px;
-        margin-bottom: 20px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
+.floating-shape:nth-child(2) {
+    top: 30%;
+    left: 70%;
+    animation-duration: 10s;
+    animation-delay: 3s;
+}
 
-    .cricketers {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-        padding: 20px;
-    }
+.floating-shape:nth-child(3) {
+    top: 60%;
+    left: 40%;
+    animation-duration: 12s;
+    animation-delay: 4s;
+}
 
-    .card {
-        background: #ffffff;
-        border-radius: 20px;
-        overflow: hidden;
-        width: 220px;
-        height: 370px;
-        text-align: center;
-        cursor: pointer;
-        transform-style: preserve-3d;
-        transition: transform 0.4s ease, box-shadow 0.4s ease;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    }
+/* Main Body */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
 
-    .card:hover {
-        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-    }
+/* Header */
+header {
+    background-color: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 2em;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 4px #000;
+}
 
-    .card img {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-        border-bottom: 2px solid #eee;
-    }
+/* Section Title */
+.section-title {
+    text-align: center;
+    padding: 30px;
+    font-size: 28px;
+    margin: 30px 20px 20px;
+    color: #333;
+    background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-    .card h3 {
-        margin: 10px 0 5px;
-        font-size: 20px;
-        color: #111827;
-    }
+/* Cricketers Section */
+.cricketers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
 
-    .card p {
-        margin: 5px 0;
-        font-size: 15px;
-        color: #555;
-    }
+/* Card */
+.card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 220px;
+    height: 370px;
+    text-align: center;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
 
-    /* Section backgrounds */
-    #batsmen {
-        background: linear-gradient(135deg, #ffdde1, #ee9ca7);
-        padding: 20px;
-        border-radius: 12px;
-        margin: 20px;
-    }
+.card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
 
-    #bowlers {
-        background: linear-gradient(135deg, #c2e9fb, #a1c4fd);
-        padding: 20px;
-        border-radius: 12px;
-        margin: 20px;
-    }
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 2px solid #eee;
+}
 
-    #allrounders {
-        background: linear-gradient(135deg, #d4fc79, #96e6a1);
-        padding: 20px;
-        border-radius: 12px;
-        margin: 20px;
-    }
+.card h3 {
+    margin: 10px 0 5px;
+    font-size: 20px;
+    color: #111827;
+}
 
-    /* Popup Styles */
-/* Popup Styles with Effective Background */
+.card p {
+    margin: 5px 0;
+    font-size: 15px;
+    color: #555;
+}
+
+/* Sections Backgrounds */
+#batsmen, #bowlers, #allrounders {
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px;
+}
+
+#batsmen {
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+}
+
+#bowlers {
+    background: linear-gradient(135deg, #c2e9fb, #a1c4fd);
+}
+
+#allrounders {
+    background: linear-gradient(135deg, #d4fc79, #96e6a1);
+}
+
+/* Popup */
 .popup {
     display: none;
     position: fixed;
@@ -114,7 +161,7 @@
 
 .popup-content {
     background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-radius: 20px;
@@ -156,70 +203,13 @@
     0% { transform: scale(0.7); opacity: 0; }
     100% { transform: scale(1); opacity: 1; }
 }
-background: linear-gradient(135deg, rgba(255,0,150,0.5), rgba(0,204,255,0.4));
-/* Main Body Background with Dynamic Gradient Animation */
-body {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    background-size: 400% 400%;
-    animation: gradientShift 15s ease infinite;
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
 
-/* Gradient Animation Effect */
 @keyframes gradientShift {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
-/* Adding floating shapes in the background */
-.floating-shapes {
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    animation: moveShapes 30s ease infinite;
-}
-
-.floating-shape {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    animation: floatShape 5s ease-in-out infinite;
-}
-
-.floating-shape:nth-child(1) {
-    top: 10%;
-    left: 20%;
-    animation-duration: 7s;
-    animation-delay: 2s;
-}
-
-.floating-shape:nth-child(2) {
-    top: 30%;
-    left: 70%;
-    animation-duration: 10s;
-    animation-delay: 3s;
-}
-
-.floating-shape:nth-child(3) {
-    top: 60%;
-    left: 40%;
-    animation-duration: 12s;
-    animation-delay: 4s;
-}
-
-/* Moving shapes animation */
 @keyframes floatShape {
     0% { transform: translateY(0); opacity: 0.7; }
     50% { transform: translateY(-20px); opacity: 0.9; }
@@ -230,27 +220,23 @@ body {
     0% { transform: translateX(0) translateY(0); }
     100% { transform: translateX(100%) translateY(100%); }
 }
-/* Smooth animation for text */
+
+/* Text Animation */
 h1, h2, h3, p {
     color: #ffffff;
     text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
     animation: fadeInText 2s ease-in-out forwards;
 }
 
-h1 {
-    animation-delay: 0.5s;
-}
-
-h2, h3 {
-    animation-delay: 1s;
-}
+h1 { animation-delay: 0.5s; }
+h2, h3 { animation-delay: 1s; }
 
 @keyframes fadeInText {
     0% { opacity: 0; transform: translateY(20px); }
     100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Bouncy Button Animation */
+/* Button */
 button {
     background-color: #2575fc;
     color: #fff;
@@ -265,56 +251,38 @@ button {
 button:hover {
     transform: scale(1.1);
 }
-/* Character Container */
+
+/* Character */
 .character {
     position: absolute;
     bottom: 10%;
-    left: -100px; /* Start position off-screen */
-    width: 100px;  /* Size of the character */
+    left: -100px;
+    width: 100px;
     animation: moveCharacter 8s ease-in-out infinite, bounce 1s infinite;
-    z-index: 1000;  /* Make sure it appears above other content */
-}
-
-/* Move the character across the screen */
-@keyframes moveCharacter {
-    0% {
-        left: -100px;
-    }
-    25% {
-        left: 30%;
-    }
-    50% {
-        left: 60%;
-    }
-    75% {
-        left: 90%;
-    }
-    100% {
-        left: 100%;
-    }
-}
-
-/* Bounce effect for a lively feel */
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-15px);
-    }
-    60% {
-        transform: translateY(-10px);
-    }
-}
-
-/* Optional: Add animation to make the character wave (if it has a hand) */
-@keyframes wave {
-    0%, 100% { transform: rotate(0); }
-    50% { transform: rotate(10deg); }
+    z-index: 1000;
 }
 
 .character img {
-    width: 100%;  /* Ensure the image fits in the container */
+    width: 100%;
     border-radius: 50%;
     animation: wave 2s ease-in-out infinite;
+}
+
+@keyframes moveCharacter {
+    0% { left: -100px; }
+    25% { left: 30%; }
+    50% { left: 60%; }
+    75% { left: 90%; }
+    100% { left: 100%; }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-15px); }
+    60% { transform: translateY(-10px); }
+}
+
+@keyframes wave {
+    0%, 100% { transform: rotate(0); }
+    50% { transform: rotate(10deg); }
 }
